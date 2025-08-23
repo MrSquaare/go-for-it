@@ -1,0 +1,33 @@
+{
+  "name": "@go-for-it/cli",
+  "version": "0.0.0",
+  "type": "module",
+  "bin": {
+    "go-for-it": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "clean": "del-cli dist/"
+  },
+  "dependencies": {
+    "@go-for-it/core": "workspace:*",
+    "ink": "^6.2.2",
+    "react": "^19.1.1",
+    "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "@go-for-it/eslint-config": "workspace:*",
+    "@go-for-it/eslint-config-react": "workspace:*",
+    "@types/node": "^22.17.2",
+    "@types/react": "^19.1.11",
+    "@types/yargs": "^17.0.33",
+    "del-cli": "^6.0.0",
+    "eslint": "^9.34.0",
+    "globals": "^16.3.0",
+    "tsdown": "^0.14.1",
+    "typescript": "^5.9.2"
+  }
+}
