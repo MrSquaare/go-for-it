@@ -6,7 +6,8 @@
     "node": ">=22"
   },
   "bin": {
-    "go-for-it": "./dist/index.js"
+    "go-for-it": "./dist/index.js",
+    "gfi": "./dist/index.js"
   },
   "files": [
     "dist"
