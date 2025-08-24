@@ -17,13 +17,13 @@ jobs:
         uses: ./.github/actions/setup-env
 
       - name: Build
-        run: pnpm build --filter "*/core"
+        run: pnpm build --filter ./packages/core
 
       - name: Lint
-        run: pnpm lint --filter "*/core"
+        run: pnpm lint --filter ./packages/core
 
       - name: Type Check
-        run: pnpm type-check --filter "*/core"
+        run: pnpm type-check --filter ./packages/core
 
   cli-checks:
     runs-on: ubuntu-latest
@@ -36,10 +36,10 @@ jobs:
         uses: ./.github/actions/setup-env
 
       - name: Build
-        run: pnpm build --filter "*/cli"
+        run: pnpm build --filter ./packages/cli
 
       - name: Lint
-        run: pnpm lint --filter "*/cli"
+        run: pnpm lint --filter ./packages/cli
 
       - name: Type Check
-        run: pnpm type-check --filter "*/cli"
+        run: pnpm type-check --filter ./packages/cli
