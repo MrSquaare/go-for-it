@@ -10,7 +10,6 @@ export const { config } = await loadConfig<GoForItConfig>({
   sources: [
     {
       files: ["go-for-it.config", "gfi.config"],
-      extensions: ["ts", "js", "mjs", "cjs"],
     },
   ],
   defaults: {
