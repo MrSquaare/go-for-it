@@ -9,6 +9,12 @@
     "go-for-it": "./dist/cli.js",
     "gfi": "./dist/cli.js"
   },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -24,6 +30,7 @@
     "@go-for-it/core": "workspace:*",
     "ink": "^6.2.2",
     "react": "^19.1.1",
+    "unconfig": "^7.3.3",
     "yargs": "^18.0.0"
   },
   "devDependencies": {

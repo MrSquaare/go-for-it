@@ -2,6 +2,8 @@ import { hello } from "@go-for-it/core";
 import { Box, render, Text } from "ink";
 import type { CommandModule } from "yargs";
 
+import { config } from "../config.js";
+
 type HelloCommandOptions = {
   name?: string | undefined;
   loud?: boolean | undefined;
@@ -20,6 +22,7 @@ export const helloCommand: CommandModule<object, HelloCommandOptions> = {
         alias: "L",
         type: "boolean",
         description: "Say it loud",
+        default: config.hello?.loud,
       });
   },
   handler: (argv) => {
