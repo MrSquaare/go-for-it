@@ -65,6 +65,10 @@ importers:
         version: 5.9.2
 
   packages/core:
+    dependencies:
+      defu:
+        specifier: ^6.1.4
+        version: 6.1.4
     devDependencies:
       '@go-for-it/eslint-config':
         specifier: workspace:*
