@@ -19,6 +19,7 @@
     "build": "tsdown",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
     "clean": "del-cli dist/"
   },
   "devDependencies": {

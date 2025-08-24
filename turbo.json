@@ -19,6 +19,9 @@
     "lint:fix": {
       "cache": false
     },
+    "type-check": {
+      "cache": false
+    },
     "clean": {
       "cache": false,
       "outputs": [
