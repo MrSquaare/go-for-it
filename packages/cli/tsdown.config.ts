@@ -1,7 +1,7 @@
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
-  entry: ["src/index.ts"],
+  entry: ["src/cli.ts"],
   banner: {
     js: "#!/usr/bin/env node",
   },
