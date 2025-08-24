@@ -1,0 +1,45 @@
+name: Pull Request
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  core-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-env
+
+      - name: Build
+        run: pnpm build --filter ./packages/core
+
+      - name: Lint
+        run: pnpm lint --filter ./packages/core
+
+      - name: Type Check
+        run: pnpm type-check --filter ./packages/core
+
+  cli-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-env
+
+      - name: Build
+        run: pnpm build --filter ./packages/cli
+
+      - name: Lint
+        run: pnpm lint --filter ./packages/cli
+
+      - name: Type Check
+        run: pnpm type-check --filter ./packages/cli
