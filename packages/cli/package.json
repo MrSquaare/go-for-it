@@ -24,7 +24,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
-    "test": "vitest",
+    "test": "vitest run",
     "clean": "del-cli dist/"
   },
   "dependencies": {
