@@ -25,6 +25,9 @@ jobs:
       - name: Type Check
         run: pnpm type-check --filter ./packages/core
 
+      - name: Test
+        run: pnpm test --filter ./packages/core
+
   cli-checks:
     runs-on: ubuntu-latest
     steps:
@@ -43,3 +46,6 @@ jobs:
 
       - name: Type Check
         run: pnpm type-check --filter ./packages/cli
+
+      - name: Test
+        run: pnpm test --filter ./packages/cli

@@ -1,0 +1,28 @@
+diff --git a/dist/cjs/vitest.d.cts b/dist/cjs/vitest.d.cts
+index baa9e065428640f49645d69db61952f9646d1d63..f808fa9342f5622945a620de4d183e4f989a3a22 100644
+--- a/dist/cjs/vitest.d.cts
++++ b/dist/cjs/vitest.d.cts
+@@ -1,7 +1,8 @@
+ import { CLITestingLibraryMatchers } from './matchers/types.cjs';
+ declare module "vitest" {
+-    interface Assertion<T = any> extends CLITestingLibraryMatchers<any> {
++    interface Assertion<T = any> extends CLITestingLibraryMatchers<T> {
+     }
+     interface AsymmetricMatchersContaining extends CLITestingLibraryMatchers<any> {
+     }
++    interface Matchers<T = any> extends CLITestingLibraryMatchers<T> {}
+ }
+diff --git a/dist/esm/vitest.d.ts b/dist/esm/vitest.d.ts
+index 73f9b78f3a559466176682286f03b469aeb33a87..577c1251cfd4e65b1b0ca84a4613ff38bb70f557 100644
+--- a/dist/esm/vitest.d.ts
++++ b/dist/esm/vitest.d.ts
+@@ -1,7 +1,8 @@
+ import { CLITestingLibraryMatchers } from './matchers/types.js';
+ declare module "vitest" {
+-    interface Assertion<T = any> extends CLITestingLibraryMatchers<any> {
++    interface Assertion<T = any> extends CLITestingLibraryMatchers<T> {
+     }
+     interface AsymmetricMatchersContaining extends CLITestingLibraryMatchers<any> {
+     }
++    interface Matchers<T = any> extends CLITestingLibraryMatchers<T> {}
+ }

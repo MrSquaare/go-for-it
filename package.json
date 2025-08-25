@@ -7,6 +7,7 @@
     "lint": "turbo lint --continue",
     "lint:fix": "turbo lint:fix --continue",
     "type-check": "turbo type-check --continue",
+    "test": "turbo test --continue",
     "clean": "turbo clean --continue && del-cli node_modules/.cache/ .turbo/ **/.turbo/",
     "deps:update": "ncu --root -ws -t semver",
     "deps:upgrade": "ncu --root -ws -u -t semver"
